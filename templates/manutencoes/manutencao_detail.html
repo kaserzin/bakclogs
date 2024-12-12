@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Detalhes da Manutenção{% endblock %}
+{% block content %}
+<h1>Detalhes da Manutenção</h1>
+<p>Carro: {{ object.carro.modelo }}</p>
+<p>Data: {{ object.data }}</p>
+<p>Descrição: {{ object.descricao }}</p>
+<a href="{% url 'manutencao_list' %}">Voltar</a>
+{% endblock %}
