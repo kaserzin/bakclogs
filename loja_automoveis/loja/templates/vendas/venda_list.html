@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Vendas{% endblock %}
+{% block content %}
+<h1>Lista de Vendas</h1>
+<a href="{% url 'venda_create' %}">Registrar Nova Venda</a>
+<ul>
+    {% for venda in object_list %}
+        <li>
+            Data: {{ venda.data }} - Cliente: {{ venda.cliente.nome }} - Vendedor: {{ venda.vendedor.nome }}
+            <a href="{% url 'venda_detail' venda.pk %}">Detalhes</a>
+            <a href="{% url 'venda_update' venda.pk %}">Editar</a>
+            <a href="{% url 'venda_delete' venda.pk %}">Deletar</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
