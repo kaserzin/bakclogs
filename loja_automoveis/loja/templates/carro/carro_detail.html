@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-{% block title %}Detalhes do Carro{% endblock %}
-{% block content %}
-<h1>Detalhes do Carro</h1>
-<p>Modelo: {{ object.modelo }}</p>
-<p>Marca: {{ object.marca }}</p>
-<p>Preço: R$ {{ object.preco }}</p>
-<a href="{% url 'carro_list' %}">Voltar</a>
-{% endblock %}

@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-{% block title %}Detalhes da Venda{% endblock %}
-{% block content %}
-<h1>Detalhes da Venda</h1>
-<p>Data: {{ object.data }}</p>
-<p>Cliente: {{ object.cliente.nome }}</p>
-<p>Vendedor: {{ object.vendedor.nome }}</p>
-<a href="{% url 'venda_list' %}">Voltar</a>
-{% endblock %}
